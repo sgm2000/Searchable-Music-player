@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAccent">
+
+        <EditText
+            android:id="@+id/searach_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15sp"
+            android:layout_toLeftOf="@+id/search_mag_icon"
+            android:background="#FDFDFD"
+            android:drawablePadding="10sp"
+            android:hint="Enter Song name"
+            android:textColor="#0E0D0D" />
+        <ImageView
+            android:id="@+id/search_mag_icon"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15sp"
+            app:tint="#fff"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"/>
+
+    </LinearLayout>
+    <include layout="@layout/playmusic_layout" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
